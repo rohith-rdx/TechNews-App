@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:technews/components/searchbar.dart';
 import 'package:technews/utils/appbar.dart';
 import 'package:technews/utils/colors.dart';
 
@@ -15,11 +16,12 @@ class _HomeState extends State<Home> {
     var w = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Appcolors.bgColor,
-      appBar:  appbar(),
+      appBar: const appbar(),
       body: SafeArea(
-        
           child: Column(
-        children: [],
+        children: [
+          SearchBars()
+        ],
       )),
     );
   }
