@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:technews/components/bottomsheet.dart';
 import 'package:technews/components/components.dart';
 import 'package:technews/utils/colors.dart';
 import 'package:technews/utils/text.dart';
@@ -21,6 +22,9 @@ class NewsBox extends StatelessWidget {
     return Column(
       children: [
         InkWell(
+          onTap: () {
+            showMyBottomSheet(context, title, description, imageurl, url);
+          },
           child: Container(
             padding: const EdgeInsets.all(20),
             margin: const EdgeInsets.only(top: 5, left: 5, right: 5),
